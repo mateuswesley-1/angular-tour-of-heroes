@@ -1,0 +1,17 @@
+<div class="container">
+    <div>    
+        <h2>Heroes list</h2>
+        <ul class="heroes">
+            <li *ngFor="let hero of heroes">
+                <button type="button" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+                    <span class="badge">{{hero.id}}</span>
+                    <span class="name">{{hero.name}}</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <!-- property biding, o valor de selectedHero, que vem la de heroes.component
+    é associado com a variavel hero do hero.details.component -->
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+</div>
+
