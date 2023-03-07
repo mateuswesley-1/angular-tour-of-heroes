@@ -8,7 +8,9 @@ label {
     padding: .5rem;
   }
   button {
-    margin-top: 20px;
+    margin-left: 0.3em;
+    margin-right: 0.2em;
+    margin-top: 1em;
     background-color: #eee;
     padding: 1rem;
     border-radius: 4px;
@@ -16,6 +18,7 @@ label {
   }
   button:hover {
     background-color: #cfd8dc;
+    cursor: pointer;
   }
   button:disabled {
     background-color: #eee;

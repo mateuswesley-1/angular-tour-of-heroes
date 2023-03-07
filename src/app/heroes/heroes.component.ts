@@ -32,6 +32,18 @@ export class HeroesComponent {
 
   }
 
+  add(name: string): void {
+    name = name.trim()
+    if (!name) { return; }
+    this.heroService.addHero({ name } as Hero).subscribe(hero => {this.heroes.push(hero)
+    })
+  }
+
+  delete(hero: Hero): void {
+    this.heroes = this.heroes.filter(h => h !== hero);
+    this.heroService.deleteHero(hero.id).subscribe()
+  }
+
   // If you implement this method in your component or directive class,
   // Angular calls it shortly after checking the input properties for that
   // component or directive for the first time.

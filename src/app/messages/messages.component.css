@@ -16,4 +16,5 @@ h2 {
   .clear:hover {
     color: white;
     background-color: #42545C;
+    cursor: pointer;
   }
